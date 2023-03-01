@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,7 +12,7 @@ and open the template in the editor.
         <script src="js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+        <script src="./js/funcoes.js" type="text/javascript"> </script>
     </head>
     <body>
         <form name="formExemplo" action="" method="post">
@@ -36,16 +32,25 @@ and open the template in the editor.
                         
                          <div class="form-group">
                             <label>Resultados</label>
-                            <input type="text" class="form-control" required="" placeholder="Resultado" name="txtResultado">
+                            <input type="text" class="form-control" required="" placeholder="Resultado" name="txtResultado" >
                         </div>
-                        
-                                <div class="form-group">
+                         <div class="form-group">
+                            <label>ResultadosSoma</label>
+                            <input type="text" class="form-control" required="" placeholder="Resultado2" name="resultadoSoma">
+                        </div>
 
-                            <input type="button" value="Calcular" class="btn btn-info" name="btAbrir"  >
+                        <div class="form-group">
+                            <input type="checkbox" name="checkAceito" /> Aceito os Termos de Uso
                         </div>
-                           
                         
-        
+                        <div class="form-group">
+                            <input type="button" value="Calcular" class="btn btn-info" name="btAbrir" onclick="validar();" >
+                        </div>
+
+                        <div class="form-group">
+                            <input class="btn btn-danger" type="button" value="Modificar" name="btModificar" onclick="modificar();">
+                            <h1 id="atencao" ></h1>
+                        </div>
                     </div>
                 </div>
             </div>
